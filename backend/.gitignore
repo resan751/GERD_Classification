@@ -1,0 +1,59 @@
+# ==============================================================================
+# Backend .gitignore (Python / FastAPI / TensorFlow / Keras)
+# ==============================================================================
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Testing & Coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Model Weights & Large Checkpoints (>100MB exceed GitHub limit)
+*.keras
+*.h5
+*.hdf5
+*.tflite
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt*
+*.weights
+model/**/*.keras
+model/**/*.h5
+model/**/*.hdf5
+
+# Allow model configuration files
+!model/**/image_type_config.json
+!model/**/gerd_guard_config.json
+!model/**/*.json
+
+# Generated Output / Exports
+hasil_prediksi_rapidminer.csv
+hasil_prediksi_*.csv
+
+# Logs & Temporary files
+*.log
+*.tmp
+*.bak
+*~

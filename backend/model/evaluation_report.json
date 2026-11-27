@@ -1,0 +1,68 @@
+{
+  "model_name": "GERDGuard_EfficientNetB4",
+  "architecture": "EfficientNetB4",
+  "input_size": [
+    380,
+    380
+  ],
+  "input_channels": 3,
+  "classes": {
+    "0": "GERD_Normal",
+    "1": "GERD"
+  },
+  "output": "sigmoid",
+  "threshold": 0.5,
+  "preprocessing": "RGB resize 380x380; EfficientNet preprocessing is included in the Keras application model; input pixel range 0..255",
+  "dataset_split": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "seed": 42,
+  "batch_size": 4,
+  "test_metrics": {
+    "accuracy": 0.9770641922950745,
+    "auc": 0.9965330958366394,
+    "loss": 0.06826487183570862,
+    "precision": 0.973658561706543,
+    "recall": 0.9774730801582336
+  },
+  "classification_report": {
+    "GERD_Normal": {
+      "precision": 0.9800865800865801,
+      "recall": 0.9767040552200172,
+      "f1-score": 0.9783923941227312,
+      "support": 1159.0
+    },
+    "GERD": {
+      "precision": 0.9736585365853658,
+      "recall": 0.9774730656219393,
+      "f1-score": 0.9755620723362659,
+      "support": 1021.0
+    },
+    "accuracy": 0.9770642201834863,
+    "macro avg": {
+      "precision": 0.976872558335973,
+      "recall": 0.9770885604209782,
+      "f1-score": 0.9769772332294986,
+      "support": 2180.0
+    },
+    "weighted avg": {
+      "precision": 0.977076014758718,
+      "recall": 0.9770642201834863,
+      "f1-score": 0.9770668168089783,
+      "support": 2180.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1132,
+      27
+    ],
+    [
+      23,
+      998
+    ]
+  ],
+  "roc_auc": 0.9970422676849153
+}

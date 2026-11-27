@@ -1,0 +1,174 @@
+# ==============================================================================
+# Root .gitignore for GERD Classification & Explainability System (GERDGuard)
+# Covers: Frontend (Next.js / TypeScript), Backend (Python / FastAPI / TF / Keras),
+# Model Binaries, OS & IDE Artifacts
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Operating System Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.tmp
+*.temp
+*.bak
+*~
+
+# ------------------------------------------------------------------------------
+# 2. IDE, Editors & Tooling
+# ------------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# ------------------------------------------------------------------------------
+# 3. Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# ------------------------------------------------------------------------------
+# 4. Logs & Diagnostics
+# ------------------------------------------------------------------------------
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 5. Archive Files
+# ------------------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ==============================================================================
+# FRONTEND (Next.js 15, React 19, TypeScript)
+# ==============================================================================
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+frontend/out/
+build/
+frontend/build/
+dist/
+frontend/dist/
+dist-ssr/
+frontend/dist-ssr/
+coverage/
+frontend/coverage/
+
+# Next.js & TypeScript Build Artifacts
+next-env.d.ts
+frontend/next-env.d.ts
+*.tsbuildinfo
+frontend/*.tsbuildinfo
+.eslintcache
+frontend/.eslintcache
+.stylelintcache
+frontend/.stylelintcache
+.turbo/
+frontend/.turbo/
+.vercel/
+frontend/.vercel/
+
+# ==============================================================================
+# BACKEND (Python 3.10+, FastAPI, TensorFlow / Keras, OpenCV)
+# ==============================================================================
+# Virtual Environments
+.venv/
+backend/.venv/
+venv/
+backend/venv/
+env/
+backend/env/
+ENV/
+backend/ENV/
+
+# Python Bytecode & Optimization Cache
+__pycache__/
+backend/**/__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Testing & Coverage
+.pytest_cache/
+backend/**/.pytest_cache/
+.mypy_cache/
+backend/**/.mypy_cache/
+.ruff_cache/
+backend/**/.ruff_cache/
+.hypothesis/
+backend/**/.hypothesis/
+.coverage
+backend/**/.coverage
+htmlcov/
+backend/**/htmlcov/
+
+# Jupyter Notebooks & Data Science Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Database & SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# ------------------------------------------------------------------------------
+# Machine Learning: Large Model Weights & Generated Artifacts
+# (Files >100 MB exceed GitHub limit. Recommended: Git LFS / cloud storage)
+# ------------------------------------------------------------------------------
+*.keras
+*.h5
+*.hdf5
+*.tflite
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt*
+*.weights
+backend/model/**/*.keras
+backend/model/**/*.h5
+backend/model/**/*.hdf5
+
+# Allow tracking of model configuration files
+!backend/model/**/image_type_config.json
+!backend/model/**/gerd_guard_config.json
+!backend/model/**/*.json
+
+# Generated Prediction Exports / Batch Data
+backend/hasil_prediksi_rapidminer.csv
+hasil_prediksi_*.csv

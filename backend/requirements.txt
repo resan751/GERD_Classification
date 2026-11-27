@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+tensorflow==2.21.0
+numpy==2.4.6
+pillow
+python-multipart
+opencv-python-headless
+httpx
